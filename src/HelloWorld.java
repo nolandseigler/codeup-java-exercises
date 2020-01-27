@@ -5,7 +5,8 @@ public class HelloWorld {
 //        int myFavoriteNumber = 21;
 //        System.out.println(myFavoriteNumber);
 ////        String myString = 3.14159;
-//        double myNumber = 3.14;
+//        float myNumber = (float) 3.14f;
+//        float myNumber = (float) 3.14;
 //        System.out.println(myNumber);
 //        int x = 5;
 //        System.out.println(x++);
