@@ -18,6 +18,7 @@ public class ConsoleExercises {
 //        String userInputStr2 = aScanner.next();
 //        String userInputStr3 = aScanner.next();
 //        System.out.printf("%s\n%s\n%s\n", userInputStr1, userInputStr2, userInputStr3);
+//        aScanner.nextLine();
 //        //
 //        //Prompt user to enter a sentence. capture it in string using next then display
 //        System.out.print("Enter a sentence: ");
