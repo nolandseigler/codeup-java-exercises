@@ -92,8 +92,8 @@ public class MethodsExercises {
             if (!rollAgain.equalsIgnoreCase("yes")) {
                 output = die1Value + die2Value;
                 break;
-            }
-        }
+            };
+        };
         return output;
     };
     public static long randomLong(long leftLimit, long rightLimit) {
