@@ -8,7 +8,8 @@ public class MethodsExercises {
 //        System.out.println(Modulus(2, 2));
 //        System.out.println(noStar(2, 4));
 //        System.out.println(recursioniply(2, 5));
-        getInteger(1, 10);
+//        getInteger(1, 10);
+        System.out.println(factorial());
     };
     public static double Addition (double num1, double num2) {
 
@@ -51,18 +52,28 @@ public class MethodsExercises {
         return output;
     };
     //validate input is in a range
-    public static int getInteger(int min, int max) {
-        int output = 0;
+    public static long getInteger(long min, long max) {
+        long output = 0;
         Scanner aScanner = new Scanner(System.in);
         while (true) {
-            System.out.printf("Provide an integer input between %d and %d\t", min, max);
-            int userInput = aScanner.nextInt();
+            System.out.printf("Provide an integer input between %d and %d (inclusive):\t", min, max);
+            long userInput = aScanner.nextLong();
             if (userInput >= min && userInput <= max) {
                 output = userInput;
                 break;
             };
+            System.out.println("Incorrect Try Again.");
         };
         return output;
     };
-
+    //calculate the factorial of a number ex 3! is 1 x 2 x 3
+    public static long factorial() {
+       long numToFactorial = getInteger(1, 20);
+       System.out.printf("You chose %d.\n", numToFactorial);
+       long output = 1;
+       for (int i = 1; i <= numToFactorial; i++) {
+           output *= i;
+       }
+       return output;
+    }
 };
