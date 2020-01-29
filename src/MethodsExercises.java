@@ -9,7 +9,8 @@ public class MethodsExercises {
 //        System.out.println(noStar(2, 4));
 //        System.out.println(recursioniply(2, 5));
 //        getInteger(1, 10);
-        System.out.println(factorial());
+//        System.out.println(factorial());
+        rollDice();
     };
     public static double Addition (double num1, double num2) {
 
@@ -73,7 +74,29 @@ public class MethodsExercises {
        long output = 1;
        for (int i = 1; i <= numToFactorial; i++) {
            output *= i;
-       }
+       };
        return output;
-    }
+    };
+    //dice
+    public static long rollDice() {
+        Scanner bScanner = new Scanner(System.in);
+        long output = 0;
+        while (true) {
+            System.out.printf("Input the number of sides each die has:\t");
+            long userDiceInput = bScanner.nextLong();
+            long die1Value = randomLong(1, userDiceInput);
+            long die2Value = randomLong(1, userDiceInput);
+            System.out.printf("Die 1 Value: %d\nDie 2 Value: %d\nRoll Value: %d\n", die1Value, die2Value, die1Value + die2Value);
+            System.out.print("Would you like to roll again?");
+            String rollAgain = bScanner.next();
+            if (!rollAgain.equalsIgnoreCase("yes")) {
+                output = die1Value + die2Value;
+                break;
+            }
+        }
+        return output;
+    };
+    public static long randomLong(long leftLimit, long rightLimit) {
+        return leftLimit + (long) (Math.random() * (rightLimit - leftLimit));
+    };
 };
