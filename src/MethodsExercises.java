@@ -53,7 +53,7 @@ public class MethodsExercises {
         return output;
     };
     //validate input is in a range
-    public static long getInteger(long min, long max) {
+    public static long getLong(long min, long max) {
         long output = 0;
         Scanner aScanner = new Scanner(System.in);
         while (true) {
@@ -69,7 +69,7 @@ public class MethodsExercises {
     };
     //calculate the factorial of a number ex 3! is 1 x 2 x 3
     public static long factorial() {
-       long numToFactorial = getInteger(1, 20);
+       long numToFactorial = getLong(1, 20);
        System.out.printf("You chose %d.\n", numToFactorial);
        long output = 1;
        for (int i = 1; i <= numToFactorial; i++) {
