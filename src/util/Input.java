@@ -9,15 +9,13 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
     String getString() {
+        System.out.println("Input yes or no");
         String output = scanner.next();
         return output;
     }
     boolean yesNo() {
-        if (getString().equalsIgnoreCase("yes") || getString().equalsIgnoreCase("y") ) {
-            return true;
-        } else {
-            return false;
-        }
+        String testStr = getString();
+        return testStr.equalsIgnoreCase("yes") || testStr.equalsIgnoreCase("y");
     }
     int getInt(int min, int max) {
         int finalOutput = 0;
@@ -38,7 +36,7 @@ public class Input {
     double getDouble(double min, double max) {
         double finalOutput = 0;
         while (true) {
-            int output = getInt();
+            double output = getDouble();
             if (output >= min && output <= max) {
                 finalOutput = output;
                 break;
