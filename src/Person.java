@@ -29,13 +29,14 @@ public class Person {
 //        Person person2 = person1;
 //        System.out.println(person1 == person2);
 //        //
-        //output "John", "John", "Jane", "Jane" because when you set person2 to person1 you are setting the var equal to the memory address. so when you setName its changing the value of the name property of that obj at that memory address.
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
-        person2.setName("Jane");
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
+//        //output "John", "John", "Jane", "Jane" because when you set person2 to person1 you are setting the var equal to the memory address. so when you setName its changing the value of the name property of that obj at that memory address.
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+//        person2.setName("Jane");
+//        System.out.println(person1.getName());
+//        System.out.println(person2.getName());
+//        //
     };
 }
