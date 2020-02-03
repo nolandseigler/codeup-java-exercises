@@ -9,4 +9,5 @@ public class MorningWarmups {
     public static String binaryMath (String binary1, String binary2) {
         return Integer.toBinaryString(Integer.parseInt(binary1, 2) + Integer.parseInt(binary2, 2));
     }
+    //
 }
