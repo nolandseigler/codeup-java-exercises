@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class MoviesApplication {
     private static Input myScanner = new Input();
     public static void main(String[] args) {
-//        MoviesArray myMoviesArr = new MoviesArray();
         Movie[] moviesArr = MoviesArray.findAll();
         Movie[] middlingArr = new Movie[moviesArr.length];
         Movie[] outputArr = new Movie[moviesArr.length];
