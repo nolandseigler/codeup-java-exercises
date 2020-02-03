@@ -18,6 +18,10 @@ public class Input {
         String output = this.scanner.next();
         return output;
     }
+    public boolean yesNo(String param) {
+        String testStr = getString(param);
+        return testStr.equalsIgnoreCase("yes") || testStr.equalsIgnoreCase("y");
+    }
     public boolean yesNo() {
         String testStr = getString("Input yes or no");
         return testStr.equalsIgnoreCase("yes") || testStr.equalsIgnoreCase("y");

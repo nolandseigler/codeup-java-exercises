@@ -5,11 +5,16 @@ import util.Input;
 
 public class Circle {
     private double radius;
+    private static int circlesCreated = 0;
 
     public Circle() {
     }
     public Circle(double radius) {
         this.radius = radius;
+        circlesCreated++;
+    }
+    public static int getCirclesCreated() {
+        return circlesCreated;
     }
     public double getArea() {
         if (this.radius == 0.0) {
