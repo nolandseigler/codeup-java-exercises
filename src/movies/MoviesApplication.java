@@ -24,8 +24,9 @@ public class MoviesApplication {
                     for (Movie movie : moviesArr) {
                         if (movie.getCategory().equalsIgnoreCase("animated")) {
                             middlingArr[j] = movie;
+                            j++;
                         }
-                        j++;
+
                     }
                     outputArr = Arrays.copyOf(middlingArr, j);
                     break;
@@ -34,8 +35,9 @@ public class MoviesApplication {
                     for (Movie movie : moviesArr) {
                         if (movie.getCategory().equalsIgnoreCase("drama")) {
                             middlingArr[k] = movie;
+                            k++;
                         }
-                        k++;
+
                     }
                     outputArr = Arrays.copyOf(middlingArr, k);
                     break;
@@ -44,8 +46,9 @@ public class MoviesApplication {
                     for (Movie movie : moviesArr) {
                         if (movie.getCategory().equalsIgnoreCase("horror")) {
                             middlingArr[l] = movie;
+                            l++;
                         }
-                        l++;
+
                     }
                     outputArr = Arrays.copyOf(middlingArr, l);
                     break;
@@ -54,10 +57,16 @@ public class MoviesApplication {
                     for (Movie movie : moviesArr) {
                         if (movie.getCategory().equalsIgnoreCase("scifi")) {
                             middlingArr[m] = movie;
+                            m++;
                         }
-                        m++;
+
                     }
                     outputArr = Arrays.copyOf(middlingArr, m);
+                    break;
+                case 6:
+                    outputArr = Arrays.copyOf(moviesArr, moviesArr.length + 1);
+                    outputArr[outputArr.length - 1] = new Movie((myScanner.getString("\nInput a movie title: \t")), (myScanner.getString("\nInput a movie category: \t")));
+                    moviesArr = outputArr;
                     break;
                 default:
                     break;
