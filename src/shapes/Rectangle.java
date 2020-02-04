@@ -6,7 +6,6 @@ public class Rectangle {
     Rectangle(int length, int width) {
         this.length = length;
         this.width = width;
-
     }
     int getPerimeter() {
         return 2 * this.length + 2 * width;
