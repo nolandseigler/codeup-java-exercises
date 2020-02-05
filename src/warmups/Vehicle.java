@@ -1,6 +1,6 @@
 package warmups;
 
-public class Vehicle {
+abstract class Vehicle {
     int fuelGalCap;
     int fuelGal;
     String fuelType;
