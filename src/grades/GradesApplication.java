@@ -71,6 +71,9 @@ public class GradesApplication {
                 System.out.println(displayUserData(userInput, students));
             } else if (userInput.toLowerCase().equals("show class average")) {
                 System.out.printf("Class Average: %.1f\n", getClassAverage(students));
+            }  else if (userInput.toLowerCase().equals("print csv")) {
+                writeStudentReportCSV(students);
+                System.out.println("CSV report generated.");
             } else {
                 System.out.println("Sorry, no student with the username " + "'" + userInput + "'" + " has been found.");
             }
@@ -80,7 +83,6 @@ public class GradesApplication {
                 break;
             }
         }
-        writeStudentReportCSV(students);
     }
     public static String makeSelection(String prompt) {
         System.out.printf("%s\t",prompt);
