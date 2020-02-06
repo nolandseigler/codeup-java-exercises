@@ -41,6 +41,27 @@ public class GradesApplication {
         students.put("Lisa_Smith", lisa);
         students.put("LouisLovesCoding(LLC)", louis);
         students.put("Jenny", jenny);
+        String date1 = "2020-01-12";
+        String date2 = "2020-01-13";
+        String date3 = "2020-01-14";
+        String date4 = "2020-01-15";
+        String date5 = "2020-01-16";
+        bob.recordAttendance(date1, "A");
+        bob.recordAttendance(date2, "A");
+        bob.recordAttendance(date3, "A");
+        bob.recordAttendance(date4, "P");
+        lisa.recordAttendance(date1, "P");
+        lisa.recordAttendance(date2, "P");
+        lisa.recordAttendance(date3, "A");
+        lisa.recordAttendance(date4, "P");
+        louis.recordAttendance(date1, "P");
+        louis.recordAttendance(date2, "P");
+        louis.recordAttendance(date3, "A");
+        louis.recordAttendance(date4, "P");
+        jenny.recordAttendance(date1, "P");
+        jenny.recordAttendance(date2, "P");
+        jenny.recordAttendance(date3, "A");
+        jenny.recordAttendance(date4, "A");
         while(true) {
             String userInput = "";
             System.out.println("Student Github usernames and options: ");
@@ -80,7 +101,7 @@ public class GradesApplication {
             Student student = (Student) inputMap.get(githubUsername);
             String studentName = student.getName();
             double studentAverage = student.getGradeAverage();
-            output = String.format("Name: %s  |  Github Username: %s\nCurrent Average: %.1f\nStudent Grades: %s\nStudent Attendance Percentage: %.1f", studentName, githubUsername, studentAverage, student.getGradesString(), student.attendancePercentage());
+            output = String.format("Name: %s  |  Github Username: %s\nCurrent Average: %.1f\nStudent Grades: %s\nStudent Attendance Percentage: %.1f\nStudent Days Absent: %s", studentName, githubUsername, studentAverage, student.getGradesString(), student.attendancePercentage(), student.daysAbsent());
         } else {
             output = "Invalid Github Username.";
         }
