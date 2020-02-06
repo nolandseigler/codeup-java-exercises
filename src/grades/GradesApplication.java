@@ -80,7 +80,7 @@ public class GradesApplication {
             Student student = (Student) inputMap.get(githubUsername);
             String studentName = student.getName();
             double studentAverage = student.getGradeAverage();
-            output = String.format("Name: %s  |  Github Username: %s\nCurrent Average: %.1f\nStudent Grades: %s", studentName, githubUsername, studentAverage, student.getGradesString());
+            output = String.format("Name: %s  |  Github Username: %s\nCurrent Average: %.1f\nStudent Grades: %s\nStudent Attendance Percentage: %.1f", studentName, githubUsername, studentAverage, student.getGradesString(), student.attendancePercentage());
         } else {
             output = "Invalid Github Username.";
         }
@@ -89,7 +89,7 @@ public class GradesApplication {
     public static double getClassAverage(HashMap<String, Student> inputMap) {
         double output = 0;
         long i = 0;
-        for (Map.Entry<String, Student> entry : inputMap.entrySet()) {
+        for (HashMap.Entry<String, Student> entry : inputMap.entrySet()) {
             ArrayList<Integer> studentGrades = entry.getValue().getGrades();
             for (int grade : studentGrades) {
                output+=grade;
@@ -101,7 +101,7 @@ public class GradesApplication {
     public static void writeStudentReportCSV(HashMap<String, Student> inputMap) throws IOException {
         String[] array = new String[inputMap.size()];
         int i = 0;
-        for (Map.Entry<String, Student> entry : inputMap.entrySet()) {
+        for (HashMap.Entry<String, Student> entry : inputMap.entrySet()) {
             String appendThis = displayUserData(entry.getKey(), inputMap);
             if (!appendThis.equals("Invalid Github Username.")) {
                 array[i] = appendThis;
