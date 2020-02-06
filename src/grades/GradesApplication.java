@@ -44,7 +44,7 @@ public class GradesApplication {
         while(true) {
             String userInput = "";
             System.out.println("Student Github usernames and options: ");
-            System.out.println(stringKeysForPrint(students) + "Option: Show Class Average");
+            System.out.println(stringKeysForPrint(students) + "Option: Show Class Average" + "Option: Print CSV");
             userInput = makeSelection("Input a Github username to see more information or input an option: ");
             if (students.containsKey(userInput)) {
                 System.out.println(displayUserData(userInput, students));
