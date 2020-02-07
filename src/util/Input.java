@@ -28,8 +28,9 @@ public class Input {
     }
     public int getInt(int min, int max) {
         int finalOutput = 0;
+        String rangeString = String.format("Input an integer between %d and %d.", min, max);
         while (true) {
-            int output = getInt("Input a number");
+            int output = getInt(rangeString);
             if (output >= min && output <= max) {
                 finalOutput = output;
                 break;
@@ -38,14 +39,24 @@ public class Input {
         return finalOutput;
     }
     public int getInt(String prompt) {
-        System.out.printf("%s\n", prompt);
-        int output = this.scanner.nextInt();
+        boolean loopAgain = true;
+        int output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Integer.valueOf(this.scanner.next());
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
         return output;
     }
     public double getDouble(double min, double max) {
         double finalOutput = 0;
+        String rangeString = String.format("Input a double between %f and %f.", min, max);
         while (true) {
-            double output = getDouble("Input a double");
+            double output = getDouble(rangeString);
             if (output >= min && output <= max) {
                 finalOutput = output;
                 break;
@@ -54,8 +65,45 @@ public class Input {
         return finalOutput;
     }
     public double getDouble(String prompt) {
-        System.out.printf("%s\n", prompt);
-        double output = this.scanner.nextDouble();
+        boolean loopAgain = true;
+        double output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Double.valueOf(this.scanner.next());
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
+        return output;
+    }
+    public int getBinary(String prompt) {
+        boolean loopAgain = true;
+        int output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Integer.valueOf(this.scanner.next(), 2);
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
+        return output;
+    }
+    public long getHex(String prompt) {
+        boolean loopAgain = true;
+        long output = 0;
+        do {
+            try {
+                System.out.printf("%s\n", prompt);
+                output = Integer.valueOf(this.scanner.next(), 16);
+                loopAgain = false;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } while (loopAgain);
         return output;
     }
 
