@@ -135,7 +135,7 @@ public class GradesApplication {
         }
         for (String element : array) {
             sb.append(element);
-            sb.append(",");
+            sb.append(", ");
         }
 
         br.write(sb.toString());
