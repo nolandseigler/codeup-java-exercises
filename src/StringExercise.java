@@ -1,4 +1,4 @@
-public class StringExercises {
+public class StringExercise {
     public static void main(String[] args) {
         String lyrics = "We don't need no education \nWe don't need no thought control";
         String checkout = "Check \"this\" out!, \"s inside of \"s!";
